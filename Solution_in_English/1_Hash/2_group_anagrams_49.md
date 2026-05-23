@@ -169,6 +169,13 @@ hashmap["aet"] = ["eat", "tea", "ate"]
 ```python
 return list(hashmap.values())
 ```
+### list()
+```python
+list()
+```
+
+is a built-in Python function used to convert iterable objects into a list.
+
 
 Output:
 
@@ -179,6 +186,19 @@ Output:
     ["bat"]
 ]
 ```
+### List of Lists
+
+```python
+[[], [], []]
+```
+
+is called a:
+
+```text
+2D List / List of Lists
+```
+
+not a dictionary.
 
 ---
 

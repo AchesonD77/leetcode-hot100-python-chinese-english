@@ -1,5 +1,6 @@
 # 1. Two Sum（两数之和）
 
+
 ## 题目核心 | Core Idea
 
 给定一个数组 `nums` 和目标值 `target`，找到两个数字之和等于 `target` 的下标。
@@ -224,3 +225,148 @@ O(n)
 这是算法中最经典的优化思想之一。
 
 This is one of the most classic optimization ideas in algorithms.
+
+# Two Sum（HashMap 核心）
+
+## 1. enumerate(nums)
+
+### 作用
+
+同时遍历 **对于数组**：
+
+- index（下标）
+- value（元素）
+
+```python
+for i, num in enumerate(nums):
+```
+
+等价于：
+
+```python
+i   = 下标
+num = 当前数字
+```
+
+---
+
+### 示例
+
+```python
+nums = [2,7,11]
+```
+
+```python
+enumerate(nums)
+```
+
+得到：
+
+```python
+(0, 2)
+(1, 7)
+(2, 11)
+```
+
+---
+
+## 2. hashmap[num] = i
+
+
+### 本质
+是字典，根据 key 快速找到对应 value，得到的是这个 key 对应的 value（值），不是地址。
+
+```python
+hashmap[key] = value
+```
+
+这里：
+
+```python
+num -> key
+i   -> value
+```
+
+即：
+
+```python
+数字 -> 对应下标
+```
+
+---
+
+### 示例
+
+```python
+hashmap[2] = 0
+```
+
+得到：
+
+```python
+{
+    2: 0
+}
+```
+
+意思：
+
+```python
+数字 2 出现在下标 0
+```
+
+---
+
+## 3. 为什么这样设计？
+
+因为 HashMap：
+
+```python
+查找速度 O(1)
+```
+
+可以快速判断：
+
+```python
+某个数字是否已经出现过
+```
+
+核心代码：
+
+```python
+if need in hashmap:
+```
+
+---
+
+# 一句话总结（中文）
+
+```python
+enumerate(nums)
+```
+
+用于同时获取数组 “下标”和“元素”；
+
+```python
+hashmap[num] = i
+```
+
+用于把“数字”和“对应下标”存入哈希表，方便 O(1) 查找。
+
+---
+
+# One-Sentence Summary (English)
+
+```python
+enumerate(nums)
+```
+
+iterates through both the index and value,
+
+while
+
+```python
+hashmap[num] = i
+```
+
+stores the number and its index in a hash map for O(1) lookup.
