@@ -2,7 +2,7 @@
 
 # English Version
 
-![alt text](../../Snap_for_Questions/2_TwoPointers_双指针/截屏2026-05-25%2017.08.56.png)
+![alt text](<../../Snap_for_Questions/2_TwoPointers_双指针/english_verison/截屏2026-05-26 17.02.55.png>)
 
 ## 1. Problem Core
 
@@ -313,9 +313,9 @@ It is widely used in:
 ## 9. One-Sentence Memory Trick
 
 ```text
-fast traverses the array,
-slow places non-zero elements,
-swap whenever a non-zero element is found.
+fast traverses the array
+slow places non-zero elements
+swap whenever a non-zero element is found
 ```
 
 ---
@@ -323,7 +323,7 @@ swap whenever a non-zero element is found.
 ## One-Sentence Understanding of Two Pointers
 
 ```text
-The fast pointer searches forward for non-zero elements, while the slow pointer places non-zero elements at the front of the array.
+The fast pointer searches forward (from index 0 to the end) for non-zero elements, while the slow pointer places non-zero elements at the front of the array one by one.
 ```
 
 ---
